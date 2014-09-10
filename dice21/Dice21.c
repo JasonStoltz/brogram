@@ -1,6 +1,6 @@
 /*
 This program is a variation of blackjack using dice instead of cards
-The roll function is used to similate the rolling of dice
+The roll function is used to similate the rolling of dice 
 */
 
 #include <stdio.h>
