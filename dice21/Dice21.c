@@ -9,7 +9,8 @@ The roll function is used to similate the rolling of dice
 int roll(int num)
 {
   int x = 0;
-	for (int i = 0; i <= num; i++)
+  int i = 0;
+	for (i = 0; i <= num; i++)
 	{
 		x += rand() % 6 + 1;
 	}
@@ -38,63 +39,63 @@ int main()
 		printf("\n\nStarting a new game...");
 		computer_total += roll(2);
 		player_total += roll(2);
-		printf("Player score: %d", player_total);
+		printf("\nPlayer score: %d", player_total);
 		
 		//Begin Player hit loop
 		while (player_total <= 21 && hit != 0 && computer_total <= 21)
 		{
-			printf("Do you want to roll again? 1 for yes, 0 for no");
+			printf("\nDo you want to roll again? 1 for yes, 0 for no");
 			scanf("%d", &hit);
 			if (hit == 1)
 			{
 				player_total += roll(2);
-				printf("Your score is now: %d", player_total);
+				printf("\nYour score is now: %d", player_total);
 			} 
 			else 
 			{
-				printf("Your total is: %d", player_total);
-				printf("The computer started with: %d", computer_total);
+				printf("\nYour total is: %d", player_total);
+				printf("\nThe computer started with: %d", computer_total);
 
 				//Begin computer roll loop
 				while(computer_total < 16)
 				{
-					printf("The computer is rolling again...");
+					printf("\nThe computer is rolling again...");
 					computer_total += roll(2);
-					printf("The computer now has: %d", computer_total);
+					printf("\nThe computer now has: %d", computer_total);
 				}
 				
 				//Check who wins
 				if (player_total > computer_total)
 				{
-					printf("You win!");
+					printf("\nYou win!");
 				} 
 				else if (player_total == computer_total)
 				{
-					printf("A tie!");
+					printf("\nA tie!");
 				}
 				else
 				{
-					printf("You lose!");
+					printf("\nYou lose!");
 				}
 			}
 		}
 
 		if (player_total > 21)
 		{
-			printf("You lose!");
+			printf("\nYou lose!");
 		}
 
 		if (computer_total > 21)
 		{
-			printf("You win!");
+			printf("\nYou win!");
 		}
 
-		printf("Do you want to play again? 1 for yes, 0 for no");
+		printf("\nDo you want to play again? 1 for yes, 0 for no");
 		scanf("%d", playAgain);
 
 	}
 
-	printf("Thanks for playing!");
+	printf("\nThanks for playing!");
 
 
 	return 0;
