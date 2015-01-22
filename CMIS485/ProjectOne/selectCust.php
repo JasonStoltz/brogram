@@ -36,8 +36,7 @@
 
   //If the search fails
   if(!$success) {
-	echo "No record found";
-	exit;
+	echo "<h1>No record found</h1>";
   } else {
 	//Print the beginning of the table
 	echo "<h1>Selected customer:</h1>";
@@ -78,9 +77,10 @@
 	echo "<td>".$row['referrer'];
 	echo "<td>".$row['agent_id'];
   }
-  // Close the database connection 
-  odbc_close($connection);
+
   }
+    // Close the database connection 
+    odbc_close($connection);
 ?>
 
 <tbody>
