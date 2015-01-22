@@ -1,9 +1,8 @@
 <html>
 <head>
-<title>Select a Customer Record</title>
+<title>Add Customer Record</title>
 </head>
 <body>
-<!-- Set lastName and firstName variables to setup SELECT statement -->
 <?php
   //create db connection
    $connection = odbc_connect('Driver={Microsoft Access Driver (*.mdb)};DBQ=cmis008f', 'nousername', 'nopassword');
@@ -28,6 +27,7 @@
   $stateName = $_POST['state'];
   $zipCode = $_POST['zip'];
 
+//Create insert statement
 $sql = "INSERT INTO CUSTOMER ". 
       "(agent_id, lastName, firstName, middleInitial, profession, DOB, home_phone, cell_phone, employer, referrer, street, city, state, zip) ".
       "VALUES ('$agentID', '$LName', '$FName', '$mInitial', '$prof', '$birthDate', '$homePhone', '$cellPhone', '$empName', '$referName', '$streetName', '$cityName', '$stateName', '$zipCode')";
