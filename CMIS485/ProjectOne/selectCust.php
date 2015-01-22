@@ -28,7 +28,7 @@
   	 $sql =  "SELECT * FROM CUSTOMER";	
   }
  else {
- 	$sql = "SELECT * FROM CUSTOMER WHERE lastName='$lastName' AND firstName='$firstName'"
+ 	$sql = "SELECT * FROM CUSTOMER WHERE lastName='$lastName' AND firstName='$firstName'";
  }
 
   //Create success variable to store the return of the sql command execution
