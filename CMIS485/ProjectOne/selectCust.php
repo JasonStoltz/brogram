@@ -21,10 +21,15 @@
   //Set variables
   $lastName = $_POST['lastName'];
   $firstName = $_POST['firstName'];
+  $allFlag = $_POST['searchAll'];
 
-  //Set SQL SELECT statement to variable $sql
-  $sql =  "SELECT * FROM CUSTOMER";
- // WHERE lastName='$lastName' AND firstName='$firstName'"
+  //Set SQL SELECT statement to variable $sql based on flag
+  if($allFlag){
+  	 $sql =  "SELECT * FROM CUSTOMER";	
+  }
+ else {
+ 	$sql = "SELECT * FROM CUSTOMER WHERE lastName='$lastName' AND firstName='$firstName'"
+ }
 
   //Create success variable to store the return of the sql command execution
   $success = odbc_exec($connection, $sql);
