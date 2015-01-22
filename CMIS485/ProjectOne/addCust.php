@@ -39,14 +39,12 @@ $sql = "INSERT INTO CUSTOMER ".
   if(!$success) {
   //Print failed message
 	echo "<h1>Failed up add record</h1>";
-	exit;
   } else {
 	//Print success message
 	echo "<h1>Customer was added successfully</h1>";
   }
   // Close the database connection 
   odbc_close($connection);
-  }
 ?>
 
 <tbody>
