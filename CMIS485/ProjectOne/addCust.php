@@ -47,6 +47,5 @@ $sql = "INSERT INTO CUSTOMER ".
   odbc_close($connection);
 ?>
 
-<tbody>
 </body>
 </html>
