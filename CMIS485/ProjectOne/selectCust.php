@@ -21,10 +21,9 @@
   //Set variables
   $lastName = $_POST['lastName'];
   $firstName = $_POST['firstName'];
-  $allFlag = $_POST['searchAll'];
 
-  //Set SQL SELECT statement to variable $sql based on flag
-  if($allFlag){
+  //if the search all button was pressed
+  if($_POST['searchAll']){
   	 $sql =  "SELECT * FROM CUSTOMER";	
   }
  else {
